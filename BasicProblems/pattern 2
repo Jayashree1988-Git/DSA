@@ -1,0 +1,41 @@
+
+//problem -Write a Program which takes input n and prints the below pattern and upload the code to your github repo.
+
+
+
+Sample 1:
+
+Input:
+
+n = 4
+
+Expected output:
+
+****
+
+***
+
+**
+
+
+
+solution:
+
+package DSACoursePatterns;
+
+import java.util.Scanner;
+
+public class Pattern1 {
+	public static void main(String[] args ) {
+		System.out.println("Enter the input");
+		Scanner scan=new Scanner(System.in);
+		int n=scan.nextInt();
+		for(int i=1;i<=n;i++) {
+			for(int j=n;j>=i;j--) {
+				System.out.print("*");
+			}
+			System.out.print("\n");
+		}
+	}
+
+}
