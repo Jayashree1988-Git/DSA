@@ -1,0 +1,30 @@
+
+https://www.geeksforgeeks.org/problems/print-the-kth-digit3520/0
+
+
+
+//User function Template for Java
+
+class Solution{
+    static long kthDigit(int A,int B,int K){
+        // code here
+        long prod=1;
+        long result=0;
+        for(int i=1;i<=B;i++){
+            prod=prod*A;
+        }
+        long count=0;
+        while(prod>0){
+            result=prod%10;
+            prod=prod/10;
+            count++;
+            if(count==K){
+                break;
+              
+            }
+            
+        }
+        
+          return result;
+    }
+}
