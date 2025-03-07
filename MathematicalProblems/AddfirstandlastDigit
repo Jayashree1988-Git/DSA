@@ -1,0 +1,22 @@
+https://www.geeksforgeeks.org/problems/corner-digits1317/1
+
+
+
+class Solution
+{
+    public int corner_digitSum(int n)
+    {
+        // code here
+        int ld=n%10;
+        int fd=0;
+        if(n>9){
+        while(n>0){
+            fd=n%10;
+            n=n/10;
+        }
+        }
+        return ld+fd;
+        }
+       
+    
+} 
