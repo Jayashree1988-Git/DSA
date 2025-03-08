@@ -1,0 +1,30 @@
+
+
+https://www.geeksforgeeks.org/problems/number-of-divisors1631/1?
+// User function Template for Java
+class Solution {
+    static int countDivisors(int n) {
+        // code here
+        int count=0;
+        
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if((n%i)==0){
+            if(i%3==0){
+                count++;
+            }
+            
+            if((n/i)!=i){
+                int temp=n/i;
+                if(temp%3==0){
+                    count++;
+                }
+            }
+            }
+        }
+        if(n%3==0){
+            count++;
+        }
+        return count;
+      
+    }
+}
