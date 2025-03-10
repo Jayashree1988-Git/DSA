@@ -1,0 +1,17 @@
+
+
+https://www.geeksforgeeks.org/problems/sum-of-series2811/1
+
+
+class Solution {
+    public static int seriesSum(int n) {
+        // code here
+        int sum=0;
+        if(n>0){
+            for(int i=1;i<=n;i++){
+                sum=sum+i;
+            }
+        }
+        return sum;
+    }
+}
