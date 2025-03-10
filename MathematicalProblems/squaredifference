@@ -1,0 +1,19 @@
+
+https://www.geeksforgeeks.org/problems/squares-difference0939/1
+
+
+class Solution {
+    static long squaresDiff(int N){
+        // code here
+        long squareDiff=0;
+        long sum=0;
+        long squaresum=0;
+        for(int i=1;i<=N;i++){
+            
+            sum=sum+i;
+            squaresum=squaresum+(i*i);
+        }
+        squareDiff=Math.abs(squaresum-(sum*sum));
+        return squareDiff;
+    }
+}
