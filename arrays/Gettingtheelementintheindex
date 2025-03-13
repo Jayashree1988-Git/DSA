@@ -1,0 +1,12 @@
+https://www.geeksforgeeks.org/problems/c-array-print-an-element-set-25933/0
+
+
+// User function Template for Java
+class Solution {
+    public static int findElementAtIndex(int key, int[] arr) {
+        // code here
+        
+        int result=arr[key];
+        return result;
+    }
+}
