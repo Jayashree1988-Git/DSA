@@ -1,0 +1,51 @@
+
+
+
+
+Write a program to print the divisors of a number recursively.
+
+Example:
+Input: 6
+
+Output: 1 2 3 6
+
+
+
+Example:
+
+Input: 12
+
+Output: 1 2 3 4 6 12
+
+
+Solution:
+**************
+
+package DSARecursion;
+
+import java.util.Scanner;
+
+public class Divisor {
+	
+	public void Divisors(int n,int i) {
+		
+		if(i>Math.sqrt(n)) {
+			return; 
+		}
+		if(n%i==0) {
+			System.out.println(i);
+			if((n/i)!=i) {
+			System.out.println((n/i));
+			}
+		}
+		Divisors(n,i+1);
+		
+	}
+	public static void main(String[] args ) {
+		Divisor cd=new Divisor();
+		cd.Divisors(25,1);
+		
+	}
+		
+
+}
