@@ -1,0 +1,45 @@
+Write a Program to find the power of a number recursively. Take two inputs, number and the power.
+
+Example:
+Input: 2 3
+
+Output: 8
+
+Explanation : 2^3 is 8
+
+Example:
+
+Input: 5 2
+
+Output: 25
+
+Explanation: 5^2 is 25
+
+Solution is available in the github repo but do solve it on your own.
+
+
+Solution:
+
+package DSARecursion;
+
+import java.util.Scanner;
+
+public class Power {
+	
+	public int PowerOfaNumber(int n,int i) {
+		
+		if(i==1) {
+			return n; 
+		}
+		else return n*PowerOfaNumber(n,i-1);
+		
+	}
+	public static void main(String[] args ) {
+		Power cd=new Power();
+		int result=cd.PowerOfaNumber(5,4);
+		System.out.println(result);
+		
+	}
+		
+
+}
