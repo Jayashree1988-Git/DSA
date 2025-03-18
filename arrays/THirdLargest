@@ -1,0 +1,43 @@
+
+
+https://www.geeksforgeeks.org/problems/third-largest-element/1
+
+
+class Solution {
+    int thirdLargest(int arr[]) {
+        int Tlargest=-1;
+        int largest=-1;
+        int slargest=-1;
+        // Your code here
+        if(arr.length>=3){
+        
+            if(arr[0]>arr[1]){
+                largest=arr[0];
+                slargest=arr[1]; 
+        }
+        
+           else{
+                largest=arr[1];
+                slargest=arr[0]; 
+        }
+        for(int i=2;i<arr.length;i++){
+            if(arr[i]>largest){
+                 Tlargest=slargest;
+                 slargest=largest;
+                 largest=arr[i];
+                
+            }
+            else if(arr[i]>slargest){
+                Tlargest=slargest;
+                slargest=arr[i];
+            }
+            else if(arr[i]>Tlargest){
+                Tlargest=arr[i];
+            }
+        }
+        
+        }
+        return Tlargest;
+        
+    }
+}
